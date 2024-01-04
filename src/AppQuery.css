@@ -1,0 +1,9 @@
+@media screen and (max-width: 679px) {
+  .todo-input-item {
+    margin-right: 10px;
+  }
+  .todo-input-item input {
+    padding: 10px;
+    width: 130px;
+  }
+}

@@ -1,38 +1,129 @@
-.App {
+body {
+  background-color: #1f1e1e;
+  color: white;
+  overflow: hidden;
+}
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-wrapper {
+  background-color: #353434;
+  padding: 2%;
+  width: fit-content;
+  margin: 3% auto 0% auto;
+  min-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0px 5px 7px rgb(22, 22, 22);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-input {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-bottom: 1px solid rgb(84, 84, 84);
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.todo-input-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 25px;
+}
+
+.todo-input-item label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.todo-input-item input {
+  padding: 8px;
+  bottom: none;
+  width: 250px;
+}
+
+.todo-input-item input:focus {
+  outline: 2px solid green;
+}
+.primaryBtn {
+  background-color: green;
   color: white;
+  border: none;
+  border-radius: 3px;
+  margin-top: 30px;
+  padding: 10px;
+  width: 60px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.primaryBtn:hover {
+  background-color: rgb(0, 103, 0);
 }
 
-.App-link {
-  color: #61dafb;
+.secondaryBtn {
+  background-color: rgb(93, 92, 92);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  margin: 30px 10px 0px 0px;
+  padding: 10px;
+  width: fit-content;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active {
+  background-color: rgb(0, 103, 0);
+  border: none;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column !important;
+}
+.btn-area {
+  margin-bottom: 15px;
+}
+.todo-list-item {
+  display: flex;
+  background-color: rgb(42, 42, 42);
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  margin-bottom: 10px;
+  box-shadow: 0px 3px 5px rgb(43, 42, 42);
+}
+.todo-list-item h3 {
+  font-size: 25px;
+  color: green;
+  font-weight: bold;
+  margin: 0;
+}
+
+.todo-list-item p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: rgb(121, 120, 120);
+}
+
+.icon {
+  font-size: 35px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.icon:hover {
+  color: red;
+}
+
+.chack-icon {
+  font-size: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  color: rgb(0, 154, 0);
+  transition: all 0.3s;
+}
+.chack-icon:hover {
+  color: darkgreen;
 }
